@@ -134,60 +134,77 @@ function App() {
       {/* Hero Section */}
       <section className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+          <div className="flex flex-col items-center md:flex-row md:items-center md:justify-center gap-10 md:gap-16 text-center md:text-left">
+            {/* Profile Photo */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
+              className="flex-shrink-0"
             >
-              <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">
-                Drupal
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                  {' '}Expert
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8">
-                10 years of crafting exceptional digital experiences with Drupal. 
-                From enterprise solutions to complex migrations, I deliver results that scale.
-              </p>
+              <img
+                src="/profile.jpg"
+                alt="Drupal Expert Profile"
+                className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-white shadow-xl object-cover mx-auto md:mx-0"
+                style={{ boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)' }}
+              />
             </motion.div>
+            {/* Hero Text */}
+            <div className="flex-1">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-8"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">
+                  Drupal
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    {' '}Expert
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto md:mx-0 mb-8">
+                  10 years of crafting exceptional digital experiences with Drupal. 
+                  From enterprise solutions to complex migrations, I deliver results that scale.
+                </p>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-            >
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                <Mail className="mr-2 h-5 w-5" />
-                Get In Touch
-              </Button>
-              <Button size="lg" variant="outline" className="border-slate-300 hover:border-slate-400">
-                <ArrowRight className="mr-2 h-5 w-5" />
-                View My Work
-              </Button>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-12"
+              >
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Get In Touch
+                </Button>
+                <Button size="lg" variant="outline" className="border-slate-300 hover:border-slate-400">
+                  <ArrowRight className="mr-2 h-5 w-5" />
+                  View My Work
+                </Button>
+              </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-            >
-              <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900 mb-2">10+</div>
-                <div className="text-slate-600">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900 mb-2">100+</div>
-                <div className="text-slate-600">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-slate-900 mb-2">50+</div>
-                <div className="text-slate-600">Happy Clients</div>
-              </div>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto md:mx-0"
+              >
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">10+</div>
+                  <div className="text-slate-600">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">100+</div>
+                  <div className="text-slate-600">Projects Completed</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-slate-900 mb-2">50+</div>
+                  <div className="text-slate-600">Happy Clients</div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -469,7 +486,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-slate-400">
-              © 2024 Drupal Expert. Crafting exceptional digital experiences since 2014.
+              &copy; 2024 Drupal Expert. Crafting exceptional digital experiences since 2014.
             </p>
           </div>
         </div>
